@@ -1,32 +1,37 @@
 # Sublisting
-Automatiza la recolección y verificación de subdominios usando herramientas como subfinder, amass, sublist3r, httpx, y socialhunter. El repositorio incluye scripts de instalación y ejecución que obtienen, filtran y validan subdominios, con un output limpio y estético. Contribuciones bienvenidas.
 
-Descripción del Proyecto
+**Sublisting** automates the collection and verification of subdomains using tools like **subfinder**, **amass**, **sublist3r**, **httpx**, and **socialhunter**. The repository includes installation and execution scripts that gather, filter, and validate subdomains, providing clean and aesthetic output. Contributions are welcome.
 
-Este proyecto automatiza la recolección y verificación de subdominios utilizando herramientas como subfinder, amass, sublist3r, httpx y socialhunter. Incluye scripts que facilitan la obtención, filtrado y validación de subdominios, ofreciendo un resultado limpio y estéticamente organizado.
-Archivos del Repositorio
+## Project Description
 
-    finder.py: Script en Python utilizado para verificar la accesibilidad de los subdominios recolectados.
-    install.sh: Script de instalación para configurar todas las herramientas necesarias en tu entorno de trabajo.
-    Sublisting.sh: Script de Bash que automatiza el proceso de recolección de subdominios mediante diversas herramientas.
+This project automates the collection and verification of subdomains using tools like **subfinder**, **amass**, **sublist3r**, **httpx**, and **socialhunter**. It includes scripts to facilitate the gathering, filtering, and validation of subdomains, offering clean and aesthetically organized results.
 
-Instalación
+## Repository Files
 
-```
-git clone https://github.com/Gorkaaaa/Sublisting.git
+- **finder.py**: A Python script used to verify the accessibility of collected subdomains.
+- **install.sh**: An installation script to set up all the necessary tools in your working environment.
+- **Sublisting.sh**: A Bash script that automates the subdomain collection process using various tools.
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Gorkaaaa/Sublisting
 cd Sublisting
 ```
 
-Ejecuta el script de instalación para configurar el entorno:
-
-```
+Run the installation script to set up the environment:
+```bash
 chmod +x install.sh
 ./install.sh
 ```
+![imagen](https://github.com/user-attachments/assets/e9fbd91d-f035-44df-821d-22998600f692)
 
-Ejecuta el script Sublisting.sh para recolectar y verificar los subdominios:
 
-```
+Run the Sublisting.sh script to collect and verify subdomains:
+```bash
 chmod +x Sublisting.sh
-./Sublisting.sh <dominio>
+./Sublisting.sh <domain>
 ```
+![imagen](https://github.com/user-attachments/assets/852aa615-f472-4b45-aaea-0dfd6aa92fa7)
