@@ -21,6 +21,10 @@ echo -e "\e[34m[INFO]\e[0m Filtrando resultados de amass..."
 grep -oP '\b([a-zA-Z0-9.-]+\.'$DOMAIN')\b' results > domain2.txt
 echo -e "\e[32m[OK]\e[0m Filtrado de amass completado."
 
+echo -e "\e[34m[INFO]\e[0m Ejecutando assetfinder..."
+assetfinder $DOMAIN > domain10 2>/dev/null
+echo -e "\e[32m[OK]\e[0m assetfinder completado."
+
 echo -e "\e[34m[INFO]\e[0m Ejecutando sublist3r..."
 sublist3r -d $DOMAIN > results_sub 2>/dev/null
 echo -e "\e[32m[OK]\e[0m sublist3r completado."
@@ -36,7 +40,7 @@ cat domain5.txt | sed 's/"//g' | sed 's/ CN=.*//g' | sed 's/^[ \t]*//;s/[ \t]*$/
 echo -e "\e[32m[OK]\e[0m crt.sh completado."
 
 echo -e "\e[34m[INFO]\e[0m Unificando resultados..."
-cat domain1.txt domain4.txt domain2.txt domain6.txt | sort | uniq > domain
+cat domain1.txt domain4.txt domain2.txt domain6.txt domain10 | sort | uniq > domain
 echo -e "\e[32m[OK]\e[0m Resultados unificados en 'domain'."
 
 echo -e "\e[34m[INFO]\e[0m Ejecutando finder.py para verificar subdominios..."
